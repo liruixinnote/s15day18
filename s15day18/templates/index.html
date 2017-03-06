@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #pg-header{
+            background-color: cornflowerblue;
+            height: 48px;
+
+        }
+        #pg-header-zi{
+            color: white;
+            font-size: 20px;
+            line-height: 48px;
+
+            width: 140px;
+            text-align: center;
+            float: left;
+        }
+        #logo{
+
+            border-radius: 50%;
+            height: 46px;
+            width: 46px;
+            margin-left: 40px;
+            float: left;
+        }
+        #xiaoxi{
+            float: right;
+
+            height: 48px;
+            width: 100px;
+            position: relative;
+
+        }
+        #user{
+            float: right;
+
+            height: 48px;
+            width: 100px;
+            margin-right: 10px;
+            position: relative;
+        }
+        .pg-header-tu1{
+            height: 30px;
+            width: 50px;
+            padding-top: 8px;
+        }
+        .pg-header-tu2{
+            height: 40px;
+            width: 40px;
+            line-height: 48px;
+            padding-top: 4px;
+        }
+        .pg:hover{
+            background-color: #4876FF;
+        }
+        #pg-menu{
+
+
+            position: fixed;
+            top:48px;
+            bottom: 0;
+            width: 20%;
+            background-color: #6B6B6B;
+        }
+        .menu-1{
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #969696
+        }
+        .menu-2{
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #969696;
+        }
+        .menu-2:hover{
+            background-color: #969696;
+        }
+        #pg-content{
+            position: absolute;
+            top: 48px;
+            bottom: 0;
+            right: 0;left: 20%;
+            border-top: 25px solid 	#E0EEEE;
+            border-left: 25px solid 	#E0EEEE;
+            border-right: 25px solid 	#E0EEEE;
+        }
+        .sp1{
+            margin-left: 50px;
+            font-weight: bold;
+
+        }
+        .sp{
+            margin-left: 20px;
+            font-weight: bold;
+            color: #4876FF;
+            font-size: 20px;
+        }
+        #hide{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.4;
+            background-color: black;
+            z-index: 80;
+        }
+        #input{
+            position: fixed;
+            width: 400px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -200px;
+
+
+
+            z-index: 100;
+            background-color: white;
+        }
+        .la{
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+        .notsee{
+            display: none;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="pg-header">
+        <img  id="logo" src="static/logo2.png" alt="">
+        <div id="pg-header-zi">自动化运维平台</div>
+        <div class="pg" style="float: right;height: 48px;width: 50px;line-height: 48px;text-align: center;color: white;font-size: 20px;margin-right: 10px">注销</div>
+        <div class="pg" style="float: right;height: 48px;width: 50px;line-height: 48px;text-align: center;color: white;font-size: 20px;margin-right: 10px" >注册</div>
+        <div class="pg" id="user">
+            <img class="pg-header-tu2" src="static/touxiang.png" alt="">
+            <span style="color: white;font-size: 20px;position: absolute;top: 13px;right: 8px">admin</span>
+        </div>
+        <div class="pg" id="xiaoxi">
+            <img class="pg-header-tu1" src="static/mail1.png" alt="">
+            <span style="color: white;font-size: 20px;position: absolute;top: 13px;right: 8px">消息</span>
+        </div>
+
+    </div>
+    <div id="pg-menu">
+        <div class="menu-1" style="">
+            &nbsp;<span style="font-weight: bold;color: white">管理平台</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="height: 15px;width: 30px" src="static/xia.png" alt="">
+        </div>
+
+        <div>
+            <div>
+                <div class="menu-2 click">
+                    &nbsp;<img style="width: 15px;height: 15px" src="static/system.png" alt="">&nbsp;<span style="color: white;font-weight: 700;font-size: 15px">系统总览</span>
+                </div>
+                <div class="notsee q">
+                    <div class="menu-2">
+                        <span style="color: white;font-weight: 700;font-size: 10px;margin-left: 70px">-系统状态</span>
+                    </div>
+                    <div class="menu-2">
+                        <span style="color: white;font-weight: 700;font-size: 10px;margin-left: 70px">-资源调度</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="menu-2 click">
+                    &nbsp;<img style="width: 15px;height: 15px" src="static/node.png" alt="">&nbsp;<span style="color: white;font-weight: 700;font-size: 15px">节点管理</span>
+                </div>
+                <div class="notsee q">
+                    <div class="menu-2">
+                        <span style="color: white;font-weight: 700;font-size: 10px;margin-left: 70px">-增加节点</span>
+                    </div>
+                    <div class="menu-2">
+                        <span style="color: white;font-weight: 700;font-size: 10px;margin-left: 70px">-增加节点</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="menu-2 click">
+                    &nbsp;<img style="width: 15px;height: 15px" src="static/fabu.png" alt="">&nbsp;<span style="color: white;font-weight: 700;font-size: 15px">发布管理</span>
+                </div>
+                <div class="notsee q">
+                    <div class="menu-2">
+                        <span style="color: white;font-weight: 700;font-size: 10px;margin-left: 70px;">-代码发布</span>
+                    </div>
+                    <div class="menu-2">
+                        <span style="color: white;font-weight: 700;font-size: 10px;margin-left: 70px">-数据库脚本发布</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="menu-2 click">
+                    &nbsp;<img style="width: 15px;height: 15px" src="static/jiankong.png" alt="">&nbsp;<span style="color: white;font-weight: 700;font-size: 15px">系统监控</span>
+                </div>
+                <div class="notsee q">
+                    <div class="menu-2 ">
+                        <span style="color: white;font-weight: 700;font-size: 10px;margin-left: 70px">-网卡流量</span>
+                    </div>
+                    <div class="menu-2 ">
+                        <span style="color: white;font-weight: 700;font-size: 10px;margin-left: 70px">-CPU使用</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+    <div id="pg-content" style="overflow: auto">
+        <div style="border: 2px solid 	#E0EEEE;height: 40px;line-height: 40px">
+            <span class="sp1">集群</span><span class="sp">12</span>
+            <span class="sp1">节点</span><span class="sp">39</span>
+            <span class="sp1">节点在线数</span><span class="sp">36</span>
+        </div>
+        <div>
+            <div style="font-size: 30px;font-weight: bold;padding-left: 70px;padding-top: 30px;padding-bottom: 20px">服务器节点信息</div>
+            <div><span class="add" style="display: inline-block;height: 30px;width: 60px;font-size: 20px;background-color: #dddddd;line-height: 30px;text-align: center">添加</span></div>
+            <div>
+                <table border="1 solid " >
+
+                    <tr>
+                        <th>主机名</th>
+                        <th>IP</th>
+                        <th>端口</th>
+                        <th>操作</th>
+                    </tr>
+                    {% for row in host_list %}
+                    <tr>
+                        <td target="host">{{ row.host }}</td>
+                        <td target="ip">{{ row.ip }}</td>
+                        <td target="port">{{ row.port }}</td>
+                        <td class="delete"> <span class="edit">编辑</span><span class="del">|删除</span></td>
+                    </tr>
+                    {% endfor %}
+
+
+                </table>
+            </div>
+
+        </div>
+
+
+        <div id="hide" class="notsee a"></div>
+        <div id="input" class="notsee a">
+            <p><label class="la">主机名：</label><input type="text" name="host"></p>
+            <p><label class="la">IP：</label><input type="text" name="ip"></p>
+            <p><label class="la">端口：</label><input type="text" name="port"></p>
+            <p><label class="la">应用：</label><input type="text" name="service"></p>
+            <input class="b" style="margin-left: 110px" type="button" value="确定"/>
+            <input class="c" style="margin-left: 30px" type="button" value="取消"/>
+        </div>
+    </div>
+<script src="static/jquery-3.1.1.js"></script>
+<script>
+    //动态菜单栏
+    /*
+    $(".click").click(function () {
+        $(this).next().removeClass("notsee");
+        $(this).parent().siblings().find(".q").addClass("notsee");
+    });
+    */
+
+    $(".click").click(function () {
+        if($(this).next().hasClass("notsee")){
+             $(this).next().removeClass("notsee");
+        }else{
+            $(this).next().addClass("notsee");
+        }
+        $(this).parent().siblings().find(".q").addClass("notsee");
+    });
+
+
+    //删除一行
+    $(".del").click(function () {
+        $(this).parent().parent().remove();
+    });
+
+    //编辑
+    $(".edit").click(function () {
+        $(".a").removeClass("notsee");
+        $(this).parent().prevAll().each(function () {
+           var text = $(this).text();
+           var v = $(this).attr("target");
+           var tmp1 = 'input[name="';
+           var tmp2 = '"]';
+           var tmp3 = tmp1 + v + tmp2;
+           $(tmp3).val(text)
+       })
+    });
+
+
+
+    //弹出对话框
+    $(".add").click(function () {
+        $(".a").removeClass("notsee");
+        $("input[type='text']").val(" ");
+
+    });
+    //确定
+    $(".b").click(function () {
+        $(".a").addClass("notsee");
+        /*
+        $("input[type='text']").each(function () {
+            var attr= $(this).attr("name")
+            var text = $(this).val()
+            $("[target=]")
+        })
+        */
+    })
+
+    //取消
+        $(".c").click(function () {
+        $(".a").addClass("notsee")
+    })
+</script>
+
+</body>
+</html>
